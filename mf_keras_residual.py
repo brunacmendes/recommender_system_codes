@@ -14,7 +14,7 @@ from keras.regularizers import l2
 from keras.optimizers import SGD, Adam
 
 # load in the data
-df = pd.read_csv('../large_files/movielens-20m-dataset/edited_rating.csv')
+df = pd.read_csv('dataset/ml-25m/edited_ratings.csv')
 
 N = df.userId.max() + 1 # number of users
 M = df.movie_idx.max() + 1 # number of movies

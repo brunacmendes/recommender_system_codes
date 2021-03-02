@@ -9,7 +9,7 @@ import pandas as pd
 from collections import Counter
 
 # load in the data
-df = pd.read_csv('ml-25m/edited_ratings.csv')
+df = pd.read_csv('dataset/ml-25m/edited_ratings.csv')
 print("original dataframe size:", len(df))
 
 N = df.userId.max() + 1 # number of users
@@ -53,4 +53,4 @@ print("max user id:", df_small.userId.max())
 print("max movie id:", df_small.movie_idx.max())
 
 print("small dataframe size:", len(df_small))
-df_small.to_csv('ml-25m/really_small_ratings.csv', index=False)
+df_small.to_csv('dataset/ml-25m/really_small_ratings.csv', index=False)

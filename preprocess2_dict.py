@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.utils import shuffle
 
 # load in the data
-df = pd.read_csv('ml-25m/really_small_ratings.csv')
+df = pd.read_csv('dataset/ml-25m/really_small_ratings.csv')
 
 N = df.userId.max() + 1 # number of users
 M = df.movie_idx.max() + 1 # number of movies

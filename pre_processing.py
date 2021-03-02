@@ -1,6 +1,6 @@
 import pandas as pd 
 
-df = pd.read_csv('ml-25m/ratings.csv') 
+df = pd.read_csv('dataset/ml-25m/ratings.csv') 
 
 #note:
 #user ids are ordered sequentially from 1 with no missing numbers
@@ -24,4 +24,4 @@ df["movie_idx"] = df.apply(lambda row: movie2idx[row.movieId], axis=1)
 
 df = df.drop(columns=['timestamp'])
 
-df.to_csv('ml-25m/edited_ratings.csv')
+df.to_csv('dataset/ml-25m/edited_ratings.csv')
