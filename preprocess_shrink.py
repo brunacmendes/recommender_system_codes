@@ -20,8 +20,8 @@ user_ids_count = Counter(df.userId)
 movie_ids_count = Counter(df.movie_idx)
 
 # number of users and movies we would like to keep
-n = 1000
-m = 200
+n = 10000
+m = 2000
 
 user_ids = [u for u, c in user_ids_count.most_common(n)]
 movie_ids = [m for m, c in movie_ids_count.most_common(m)]
@@ -53,4 +53,4 @@ print("max user id:", df_small.userId.max())
 print("max movie id:", df_small.movie_idx.max())
 
 print("small dataframe size:", len(df_small))
-df_small.to_csv('dataset/ml-25m/really_small_ratings.csv', index=False)
+df_small.to_csv('dataset/ml-25m/small_ratings.csv', index=False)
